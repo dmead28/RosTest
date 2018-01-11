@@ -14,6 +14,9 @@
 		41D344B220054C37008BC6D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D344B020054C36008BC6D1 /* LaunchScreen.storyboard */; };
 		41D344BD20054C37008BC6D1 /* RosTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D344BC20054C37008BC6D1 /* RosTestTests.swift */; };
 		41D344C820054C37008BC6D1 /* RosTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D344C720054C37008BC6D1 /* RosTestUITests.swift */; };
+		41D344D620054D56008BC6D1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D344D520054D56008BC6D1 /* RealmManager.swift */; };
+		41D344D820054D99008BC6D1 /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D344D720054D99008BC6D1 /* RealmObjects.swift */; };
+		797D2DCEAEE232D6AF74C461 /* Pods_RosTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1EF252B3F031903F126F4 /* Pods_RosTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		41D344C320054C37008BC6D1 /* RosTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D344C720054C37008BC6D1 /* RosTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosTestUITests.swift; sourceTree = "<group>"; };
 		41D344C920054C37008BC6D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D344D520054D56008BC6D1 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		41D344D720054D99008BC6D1 /* RealmObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
+		6E26E7CFEF3058EE972B828F /* Pods-RosTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RosTest/Pods-RosTest.debug.xcconfig"; sourceTree = "<group>"; };
+		75C1EF252B3F031903F126F4 /* Pods_RosTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D723197CCF90127453867751 /* Pods-RosTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RosTest/Pods-RosTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797D2DCEAEE232D6AF74C461 /* Pods_RosTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274344467841BD4F3C276A13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75C1EF252B3F031903F126F4 /* Pods_RosTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41D3449B20054C36008BC6D1 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,8 @@
 				41D344BB20054C37008BC6D1 /* RosTestTests */,
 				41D344C620054C37008BC6D1 /* RosTestUITests */,
 				41D344A520054C36008BC6D1 /* Products */,
+				F0687233D511FD2C9AEAD31C /* Pods */,
+				274344467841BD4F3C276A13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				41D344A720054C36008BC6D1 /* AppDelegate.swift */,
+				41D344D520054D56008BC6D1 /* RealmManager.swift */,
+				41D344D720054D99008BC6D1 /* RealmObjects.swift */,
 				41D344A920054C36008BC6D1 /* ViewController.swift */,
 				41D344AB20054C36008BC6D1 /* Main.storyboard */,
 				41D344AE20054C36008BC6D1 /* Assets.xcassets */,
@@ -125,6 +146,15 @@
 			path = RosTestUITests;
 			sourceTree = "<group>";
 		};
+		F0687233D511FD2C9AEAD31C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E26E7CFEF3058EE972B828F /* Pods-RosTest.debug.xcconfig */,
+				D723197CCF90127453867751 /* Pods-RosTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D344CC20054C37008BC6D1 /* Build configuration list for PBXNativeTarget "RosTest" */;
 			buildPhases = (
+				8DB53E8454319126595A4CFC /* [CP] Check Pods Manifest.lock */,
 				41D344A020054C36008BC6D1 /* Sources */,
 				41D344A120054C36008BC6D1 /* Frameworks */,
 				41D344A220054C36008BC6D1 /* Resources */,
+				D33F42F0F1917EB12F05A1E2 /* [CP] Embed Pods Frameworks */,
+				EB422CE1D1C83C4CB689BA8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +287,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DB53E8454319126595A4CFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RosTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D33F42F0F1917EB12F05A1E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RosTest/Pods-RosTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RosTest/Pods-RosTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB422CE1D1C83C4CB689BA8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RosTest/Pods-RosTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41D344A020054C36008BC6D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D344D820054D99008BC6D1 /* RealmObjects.swift in Sources */,
 				41D344AA20054C36008BC6D1 /* ViewController.swift in Sources */,
 				41D344A820054C36008BC6D1 /* AppDelegate.swift in Sources */,
+				41D344D620054D56008BC6D1 /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +515,7 @@
 		};
 		41D344CD20054C37008BC6D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E26E7CFEF3058EE972B828F /* Pods-RosTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +531,7 @@
 		};
 		41D344CE20054C37008BC6D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D723197CCF90127453867751 /* Pods-RosTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
